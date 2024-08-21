@@ -1,40 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!-- <base href="/">-->
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="HealthAssure">
 
- <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="HealthAssure Retail">
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="HealthAssure">
+    <link rel="apple-touch-icon" href="icons/launcher_icon.png">
 
+    <title>HealthAssure</title>
+    <link rel="manifest" href="manifest.json">
 
+    <!-- Firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBSwuO3ZND84EL2wlTeRTmI3lMprrRPRD0",
+          authDomain: "healthassure-consumer-health.firebaseapp.com",
+          projectId: "healthassure-consumer-health",
+          storageBucket: "healthassure-consumer-health.appspot.com",
+          messagingSenderId: "551527352942",
+          appId: "1:551527352942:web:9d380c9f781c16a9f4b47f",
+          measurementId: "G-6ZRN1R5HF9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 
- <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="HealthAssure Retail">
-  <link rel="apple-touch-icon" href="icons/launcher_icon.png">
+    <!-- PDF.js scripts -->
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>-->
+<!--    <script type="text/javascript">-->
+<!--        pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js";-->
+<!--    </script>-->
 
-
-
- <title>HealthAssure Retail</title>
-  <link rel="manifest" href="manifest.json">
+    <!-- JavaScript function to get full URL -->
+    <script>
+        function getFullUrl() {
+            return window.location.href;
+        }
+    </script>
 </head>
 <body>
-  <script>
+<script src="main.dart.js?v=1.1.23" type="application/javascript" defer></script>
+<script>
     if ("serviceWorker" in navigator) {
-       window.addEventListener("load", function () {
-          navigator.serviceWorker.register("/flutter_service_worker.js");
-
-       });
-     }
-    </script>
-<script src="main.dart.js" type="application/javascript"></script>
-
-
-
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register("/flutter_service_worker.js");
+        });
+    }
+</script>
 </body>
 </html>
-
-
-
